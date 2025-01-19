@@ -4,9 +4,10 @@
 project_name: docker-baseimage-alpine
 external_type: os
 release_type: stable
-release_tag: "3.18"
+release_tag: "3.21"
 ls_branch: master
-build_armhf: false
+image_sbom: true
+image_provenance: true
 repo_vars:
   - BUILD_VERSION_ARG = 'OS'
   - LS_USER = 'linuxserver'
@@ -22,6 +23,6 @@ repo_vars:
   - CI_PORT='80'
   - CI_SSL='true'
   - CI_DELAY='30'
-  - CI_DOCKERENV='TZ=US/Pacific|LSIO_FIRST_PARTY=true'
-  - CI_AUTH='user:password'
+  - CI_DOCKERENV='LSIO_FIRST_PARTY=true'
+  - CI_AUTH=''
   - CI_WEBPATH=''
